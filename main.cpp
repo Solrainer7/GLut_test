@@ -6,14 +6,18 @@
 #include <iostream>
 
 // https://www.youtube.com/watch?v=NT-0Q2Psp2Y&list=PLWzp0Bbyy_3jy34HlDrEWlcG3rF99gkvk&index=3
-
 // 2nd lession
+
+/*
+*
+*	1. создание окна
+*	2. создание точки, треугольника квадрата и полигона
+*
+*/
 
 
 void display();
 void reshape(int w, int h);
-
-
 
 
 void init()
@@ -39,7 +43,6 @@ int main(int argc, char**argv)
 }
 
 
-
 void display()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -56,6 +59,13 @@ void display()
 		glVertex2f(5,5);
 		glVertex2f(5,-5);
 		glVertex2f(-5,-5);
+	glEnd();
+
+	glBegin(GL_QUADS);
+		glVertex2f(0, 5);
+		glVertex2f(2, 5);
+		glVertex2f(2, 3);
+		glVertex2f(0, 3);
 	glEnd();
 
 	glBegin(GL_POLYGON);
